@@ -1,8 +1,12 @@
 import React from 'react';
-import { useFetchRecipes } from './hooks/useFetchRecipes';
+import { useFetchData } from './hooks/useFetchData';
 
 function App() {
-  const { recipes, isLoading, error } = useFetchRecipes();
+  const {
+    data: recipes,
+    isLoading,
+    error,
+  } = useFetchData('https://restapi.fr/api/recipes');
 
   return (
     <div
